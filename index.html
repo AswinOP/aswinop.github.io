@@ -1,68 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="Aswin's personal page showcasing his Android work and projects.">
-    <title>Aswin | Android Enthusiast & Developer</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <div class="header-content">
-        <h1>Aswin</h1>
-        <a href="https://github.com/AswinOP" aria-label="Visit Aswin's GitHub">
-          <img src="images/logo.webp" alt="GitHub Logo - Aswin's profile">
-        </a>
-      </div>
-    </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswin | Android Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-animation">
+        <div class="loading-text">
+            <span class="loading-char">L</span>
+            <span class="loading-char">O</span>
+            <span class="loading-char">A</span>
+            <span class="loading-char">D</span>
+            <span class="loading-char">I</span>
+            <span class="loading-char">N</span>
+            <span class="loading-char">G</span>
+        </div>
+    </div>
 
-    <main>
-      <article class="card" id="about">
-        <h2>About Me</h2>
-        <p>Hey, I'm <strong>Aswin</strong> (aka <span class="nickname">ֆຖ❆ຟ</span>), an Android enthusiast who loves diving deep into custom ROMs and tweaking things to perfection. I contribute as a maintainer for several devices, helping the community get the most out of their Android experience.
-        When I'm not busy working, you'll find me watching anime or playing games, enjoying some downtime, and keeping things fresh and interesting.</p>
-      </article>
+    <div class="noise"></div>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">Aswin</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#donate" class="nav-link">Donate</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
 
-      <section class="card" id="projects">
-        <h2>My Projects</h2>
-        <h3>Official Project Matrixx</h3>
-        <ul>
-          <li><a href="https://www.projectmatrixx.org/downloads/veux" target="_blank" rel="noopener noreferrer">Redmi Note 11E Pro/Redmi Note 11 Pro 5G/POCO X4 Pro 5G (veux/peux)</a></li>
-        </ul>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hello, I'm <span class="highlight">Aswin</span></h1>
+                <p class="subtitle">Android Enthusiast | Custom ROM Maintainer</p>
+                <div class="social-links">
+                    <a href="https://t.me/iaswinop" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="http://instagram.com/itsaswinop" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/iamaswinop" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <a href="#about" class="cta-button">Explore My Work</a>
+            </div>
+            <div class="hero-image">
+                <div class="profile-frame">
+                    <img src="https://avatars.githubusercontent.com/u/128906250" alt="Aswin's Avatar" class="profile-avatar">
+                </div>
+            </div>
+        </section>
 
-        <h3>Unofficial PixelOS</h3>
-        <ul>
-          <li><a href="https://sourceforge.net/projects/pixelos-veux/files/" target="_blank" rel="noopener noreferrer">Redmi Note 11E Pro/Redmi Note 11 Pro 5G/POCO X4 Pro 5G (veux/peux)</a></li>
-        </ul>
-      </section>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-header">
+                <h2>About Me</h2>
+            </div>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-button close"></span>
+                        <span class="terminal-button minimize"></span>
+                        <span class="terminal-button maximize"></span>
+                    </div>
+                    <div class="terminal-title">user@aswin:~</div>
+                </div>
+                <div class="terminal-body">
+                    <p><span class="terminal-prompt">user@aswin:~$</span> whoami</p>
+                    <p>Aswin (Android Enthusiast | Custom ROM Maintainer)</p>
+                    <p><span class="terminal-prompt">user@aswin:~$</span> cat about.txt</p>
+                    <p>Hey, I'm <span class="highlight">Aswin</span>, an Android enthusiast who loves diving deep into custom ROMs and tweaking things to perfection. I contribute as a maintainer for several devices, helping the community get the most out of their Android experience.</p>
+                    <p>When I'm not busy working, you'll find me watching anime or playing games, enjoying some downtime, and keeping things fresh and interesting.</p>
+                    <p><span class="terminal-prompt">user@aswin:~$</span> <span class="terminal-cursor">_</span></p>
+                </div>
+            </div>
+        </section>
 
-      <section class="card" id="contact">
-        <h2>Contact Me</h2>
-        <p>Just a friendly reminder that I may not be able to respond to every message, especially if it's irrelevant or doesn't add value to our conversation.</p>
-        <ul class="contact-links">
-          <li><a href="mailto:itsaswinop@gmail.com"><i class="fas fa-envelope"></i> E-Mail</a></li>
-          <li><a href="https://t.me/iaswinop"><i class="fab fa-telegram"></i> Telegram</a></li>
-          <li><a href="http://instagram.com/itsaswinop"><i class="fab fa-instagram"></i> Instagram</a></li>
-          <li><a href="https://x.com/iamaswinop" rel="me" target="_blank"><i class="fab fa-twitter"></i> X (formerly Twitter)</a></li>
-        </ul>
-      </section>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="section-header">
+                <h2>My Projects</h2>
+            </div>
+            <div class="masonry-grid">
+                <div class="masonry-item">
+                    <div class="project-card">
+                        <div class="project-badge official">Official</div>
+                        <h3>Project Matrixx</h3>
+                        <p>A sleek and intuitive custom ROM, seamlessly built upon crDroid. Unlock enhanced performance, streamlined customization, and a user-friendly interface for a seamlessly tailored experience.</p>
+                        <div class="device-tags">
+                            <span class="device-tag">Redmi Note 11E Pro</span>
+                            <span class="device-tag">Redmi Note 11 Pro 5G</span>
+                            <span class="device-tag">POCO X4 Pro 5G</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.projectmatrixx.org/" target="_blank" class="project-link">
+                                <i class="fa-solid fa-globe"></i> Website
+                            </a>
+                            <a href="https://www.projectmatrixx.org/downloads/veux" target="_blank" class="project-link">
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-item">
+                    <div class="project-card">
+                        <div class="project-badge unofficial">Unofficial</div>
+                        <h3>PixelOS</h3>
+                        <p>PixelOS is an AOSP based ROM, with Google apps included and all Pixel goodies. We aim to provide an experience similar to Google Pixel phones with numerous performance enhancements and a small amount of useful additional features.</p>
+                        <div class="device-tags">
+                            <span class="device-tag">Redmi Note 11E Pro</span>
+                            <span class="device-tag">Redmi Note 11 Pro 5G</span>
+                            <span class="device-tag">POCO X4 Pro 5G</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://pixelos.net/" target="_blank" class="project-link">
+                                <i class="fa-solid fa-globe"></i> Website
+                            </a>
+                            <a href="https://sourceforge.net/projects/pixelos-veux/files/" target="_blank" class="project-link">
+                                <i class="fa-solid fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <section class="card" id="donations">
-        <h2>Donations</h2>
-        <p>If you appreciate my work and would like to support me, you can make a donation using one of the following methods:</p>
-        <ul class="donation-links">
-          <li><a href="https://github.com/sponsors/AswinOP" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub Sponsors</a></li>
-          <li><a href="https://www.paypal.com/paypalme/iaswinop" target="_blank" rel="noopener noreferrer"><i class="fab fa-paypal"></i> PayPal</a></li>
-        </ul>
-      </section>
-    </main>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="section-header">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-note">
+                <p>Just a friendly reminder that I may not be able to respond to every message, especially if it's irrelevant or doesn't add value to our conversation.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>itsaswinop@gmail.com</p>
+                    <a href="mailto:itsaswinop@gmail.com" class="contact-button">Send Email</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fa-brands fa-telegram"></i>
+                    <h3>Telegram</h3>
+                    <p>@iaswinop</p>
+                    <a href="https://t.me/iaswinop" target="_blank" class="contact-button">Message Me</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fa-brands fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>@itsaswinop</p>
+                    <a href="http://instagram.com/itsaswinop" target="_blank" class="contact-button">Follow Me</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fa-brands fa-twitter"></i>
+                    <h3>X (Twitter)</h3>
+                    <p>@iamaswinop</p>
+                    <a href="https://x.com/iamaswinop" target="_blank" class="contact-button">Tweet Me</a>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-      <p>&copy; 2025 Aswin | <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Licensed under CC BY 4.0</a></p>
-    </footer>
-  </body>
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="current-year"></span> Aswin. All rights reserved.</p>
+                <a href="#" class="back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
