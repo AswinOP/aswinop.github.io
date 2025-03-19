@@ -488,9 +488,9 @@ header {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -632,7 +632,7 @@ footer {
   }
 
   .contact-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 15px;
   }
 
@@ -660,5 +660,11 @@ footer {
   .donation-methods {
       flex-direction: column;
       align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-grid {
+      grid-template-columns: 1fr;
   }
 }
