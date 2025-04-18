@@ -4,34 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aswin's Website</title>
+    <meta name="description" content="Custom ROM Developer | Open Source Contributor | Android Enthusiast">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="loading-animation">
-        <div class="loading-text">
-            <span class="loading-char">L</span>
-            <span class="loading-char">O</span>
-            <span class="loading-char">A</span>
-            <span class="loading-char">D</span>
-            <span class="loading-char">I</span>
-            <span class="loading-char">N</span>
-            <span class="loading-char">G</span>
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="hexagon"></div>
+            <div class="loading-text">Booting System...</div>
         </div>
     </div>
 
+    <div class="particles" id="particles-js"></div>
     <div class="noise"></div>
+    
     <div class="container">
         <header>
-            <div class="logo">ֆຖ❆ຟ</div>
+            <div class="logo" data-text="ֆຖ❆ຟ">ֆຖ❆ຟ</div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#about" class="nav-link hover-underline">About</a></li>
+                    <li><a href="#projects" class="nav-link hover-underline">Projects</a></li>
+                    <li><a href="#contact" class="nav-link hover-underline">Contact</a></li>
                 </ul>
             </nav>
             <div class="hamburger" aria-label="Toggle navigation">
@@ -43,25 +39,39 @@
 
         <section class="hero">
             <div class="hero-content">
-                <h1>Hello, I'm <span class="highlight">Aswin</span></h1>
-                <p class="subtitle">Open Source Enthusiast | Custom ROM Maintainer</p>
-                <div class="social-links">
-                    <a href="https://t.me/iaswinop" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                    <a href="http://instagram.com/itsaswinop" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://x.com/iamaswinop" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Aswin</span>
+                        <span class="title">Custom ROM Maintainer</span>
+                    </h1>
+                    <p class="hero-subtitle">Building better Android experiences through open-source development</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="cta-button primary">View My Work</a>
+                        <a href="#contact" class="cta-button secondary">Get In Touch</a>
+                    </div>
                 </div>
-                <a href="#about" class="cta-button">Explore My Work</a>
+                <div class="hero-image">
+                    <div class="avatar-container">
+                        <div class="avatar-frame">
+                            <img src="https://avatars.githubusercontent.com/u/128906250" alt="Aswin's Avatar" class="profile-avatar">
+                        </div>
+                        <div class="avatar-decoration"></div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-frame">
-                    <img src="https://avatars.githubusercontent.com/u/128906250" alt="Aswin's Avatar" class="profile-avatar">
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section id="about" class="section about">
             <div class="section-header">
-                <h2>About Me</h2>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-subtitle">Get to know me better</div>
             </div>
             <div class="terminal">
                 <div class="terminal-header">
@@ -74,7 +84,7 @@
                 </div>
                 <div class="terminal-body">
                     <p><span class="terminal-prompt">user@aswin:~$</span> whoami</p>
-                    <p>Online, I’m known as Aswin OP, or by my signature alias, ֆຖ❆ຟ.</p>
+                    <p>Online, I'm known as Aswin OP, or by my signature alias, ֆຖ❆ຟ.</p>
                     <p><span class="terminal-prompt">user@aswin:~$</span> cat about.txt</p>
                     <p>An Open Source enthusiast and custom ROM maintainer who loves diving deep into custom ROMs and tweaking things to perfection. I contribute as a maintainer for several devices, helping the community get the most out of their Android experience.</p>
                     <p><span class="terminal-prompt">user@aswin:~$</span> cat work.txt</p>
@@ -86,108 +96,172 @@
             </div>
         </section>
 
-        <section id="projects" class="projects">
+        <section id="projects" class="section projects">
             <div class="section-header">
-                <h2>My Projects</h2>
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-subtitle">Some of my notable works</div>
             </div>
-            <div class="masonry-grid">
-                <div class="masonry-item">
-                    <div class="project-card">
-                        <div class="project-badge official">Official</div>
-                        <h3>Project Matrixx</h3>
-                        <p>A sleek and intuitive custom ROM, seamlessly built upon crDroid. Unlock enhanced performance, streamlined customization, and a user-friendly interface for a seamlessly tailored experience.</p>
-                        <div class="device-tags">
-                            <span class="device-tag">Redmi Note 11E Pro</span>
-                            <span class="device-tag">Redmi Note 11 Pro 5G</span>
-                            <span class="device-tag">POCO X4 Pro 5G</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://www.projectmatrixx.org/" target="_blank" class="project-link">
-                                <i class="fa-solid fa-globe"></i> Website
-                            </a>
-                            <a href="https://www.projectmatrixx.org/downloads/veux" target="_blank" class="project-link">
-                                <i class="fa-solid fa-download"></i> Download
-                            </a>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-badge official">Official</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Matrixx</h3>
+                        <p class="project-description">A sleek and intuitive custom ROM, seamlessly built upon crDroid. Unlock enhanced performance, streamlined customization, and a user-friendly interface for a seamlessly tailored experience.</p>
+                        <div class="project-devices">
+                            <h4>Supported Devices:</h4>
+                            <ul class="device-list">
+                                <li>Redmi Note 11E Pro</li>
+                                <li>Redmi Note 11 Pro 5G</li>
+                                <li>POCO X4 Pro 5G</li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <div class="masonry-item">
-                    <div class="project-card">
-                        <div class="project-badge unofficial">Unofficial</div>
-                        <h3>PixelOS</h3>
-                        <p>PixelOS is an AOSP based ROM, with Google apps included and all Pixel goodies. We aim to provide an experience similar to Google Pixel phones with numerous performance enhancements and a small amount of useful additional features.</p>
-                        <div class="device-tags">
-                            <span class="device-tag">Redmi Note 11E Pro</span>
-                            <span class="device-tag">Redmi Note 11 Pro 5G</span>
-                            <span class="device-tag">POCO X4 Pro 5G</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://pixelos.net/" target="_blank" class="project-link">
-                                <i class="fa-solid fa-globe"></i> Website
-                            </a>
-                            <a href="https://sourceforge.net/projects/pixelos-veux/files/" target="_blank" class="project-link">
-                                <i class="fa-solid fa-download"></i> Download
-                            </a>
-                        </div>
+                    <div class="project-links">
+                        <a href="https://www.projectmatrixx.org/" target="_blank" class="project-link">
+                            <i class="fa-solid fa-globe"></i> Website
+                        </a>
+                        <a href="https://www.projectmatrixx.org/downloads/veux" target="_blank" class="project-link">
+                            <i class="fa-solid fa-download"></i> Downloads
+                        </a>
                     </div>
                 </div>
-                <div class="masonry-item">
-                    <div class="project-card github-card">
-                        <div class="project-badge github">GitHub</div>
-                        <h3>Find More on GitHub</h3>
-                        <p>Explore all my projects, contributions, and repositories on GitHub. There's always something new being built!</p>
-                        <div class="project-links">
-                            <a href="https://github.com/AswinOP" target="_blank" class="project-link github-link">
-                                <i class="fab fa-github"></i> Visit My GitHub
-                            </a>
+                
+                <div class="project-card">
+                    <div class="project-badge unofficial">Unofficial</div>
+                    <div class="project-content">
+                        <h3 class="project-title">PixelOS</h3>
+                        <p class="project-description">PixelOS is an AOSP based ROM, with Google apps included and all Pixel goodies. We aim to provide an experience similar to Google Pixel phones with numerous performance enhancements.</p>
+                        <div class="project-devices">
+                            <h4>Supported Devices:</h4>
+                            <ul class="device-list">
+                                <li>Redmi Note 11E Pro</li>
+                                <li>Redmi Note 11 Pro 5G</li>
+                                <li>POCO X4 Pro 5G</li>
+                            </ul>
                         </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://pixelos.net/" target="_blank" class="project-link">
+                            <i class="fa-solid fa-globe"></i> Website
+                        </a>
+                        <a href="https://sourceforge.net/projects/pixelos-veux/files/" target="_blank" class="project-link">
+                            <i class="fa-solid fa-download"></i> Downloads
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-badge github">GitHub</div>
+                    <div class="project-content">
+                        <h3 class="project-title">More Projects</h3>
+                        <p class="project-description">Explore all my open-source contributions, personal projects, and collaborations on GitHub. I'm constantly working on new things and contributing to the Android development community.</p>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fa-solid fa-code-branch"></i>
+                                <span>20+ Repositories</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fa-solid fa-star"></i>
+                                <span>10+ Stars</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AswinOP" target="_blank" class="project-link github">
+                            <i class="fab fa-github"></i> Visit GitHub
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="section contact">
             <div class="section-header">
-                <h2>Contact Me</h2>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-subtitle">Let's connect and collaborate</div>
             </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p>itsaswinop@gmail.com</p>
-                    <a href="mailto:itsaswinop@gmail.com" class="contact-button">Send Email</a>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h3 class="contact-title">Email</h3>
+                        <p class="contact-detail">itsaswinop@gmail.com</p>
+                        <a href="mailto:itsaswinop@gmail.com" class="contact-button">Send Message</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-telegram"></i>
+                        </div>
+                        <h3 class="contact-title">Telegram</h3>
+                        <p class="contact-detail">@iaswinop</p>
+                        <a href="https://t.me/iaswinop" target="_blank" class="contact-button">Message Me</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <h3 class="contact-title">Instagram</h3>
+                        <p class="contact-detail">@itsaswinop</p>
+                        <a href="http://instagram.com/itsaswinop" target="_blank" class="contact-button">Follow Me</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <h3 class="contact-title">GitHub</h3>
+                        <p class="contact-detail">AswinOP</p>
+                        <a href="https://github.com/AswinOP" target="_blank" class="contact-button">View Profile</a>
+                    </div>
                 </div>
-                <div class="contact-card">
-                    <i class="fa-brands fa-telegram"></i>
-                    <h3>Telegram</h3>
-                    <p>@iaswinop</p>
-                    <a href="https://t.me/iaswinop" target="_blank" class="contact-button">Message Me</a>
-                </div>
-                <div class="contact-card">
-                    <i class="fa-brands fa-instagram"></i>
-                    <h3>Instagram</h3>
-                    <p>@itsaswinop</p>
-                    <a href="http://instagram.com/itsaswinop" target="_blank" class="contact-button">Follow Me</a>
-                </div>
-                <div class="contact-card">
-                    <i class="fa-brands fa-twitter"></i>
-                    <h3>X (Twitter)</h3>
-                    <p>@iamaswinop</p>
-                    <a href="https://x.com/iamaswinop" target="_blank" class="contact-button">Tweet Me</a>
-                </div>
+                
+                <form class="contact-form">
+                    <h3 class="form-title">Send me a message</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
             </div>
         </section>
 
-        <footer>
+        <footer class="footer">
             <div class="footer-content">
-                <p>&copy; <span id="current-year"></span> Aswin. All rights reserved.</p>
-                <a href="#" class="back-to-top">
+                <div class="footer-logo">ֆຖ❆ຟ</div>
+                <div class="footer-links">
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://t.me/iaswinop" target="_blank" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="http://instagram.com/itsaswinop" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/AswinOP" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; <span id="current-year"></span> Aswin OP. All rights reserved.
+                </div>
+                <a href="#" class="back-to-top" aria-label="Back to top">
                     <i class="fas fa-arrow-up"></i>
                 </a>
             </div>
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
