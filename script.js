@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Loading screen
   const loadingScreen = document.querySelector('.loading-screen');
   setTimeout(() => {
       loadingScreen.style.opacity = '0';
@@ -8,10 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500);
   }, 1500);
 
-  // Set current year
   document.getElementById('current-year').textContent = new Date().getFullYear();
 
-  // Mobile navigation
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   
@@ -20,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.classList.toggle('active');
   });
 
-  // Smooth scrolling for nav links
   document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', function(e) {
           e.preventDefault();
@@ -45,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // Scroll indicator click
   document.querySelector('.scroll-indicator').addEventListener('click', () => {
       window.scrollTo({
           top: document.querySelector('#about').offsetTop - document.querySelector('header').offsetHeight,
@@ -53,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // Back to top button
   const backToTopButton = document.querySelector('.back-to-top');
   
   window.addEventListener('scroll', () => {
@@ -72,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 
-  // Initialize particles.js
   if (document.getElementById('particles-js')) {
       particlesJS('particles-js', {
           "particles": {
@@ -159,17 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   }
 
-  // Form submission
-  const contactForm = document.querySelector('.contact-form');
-  if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
-          e.preventDefault();
-          alert('Thank you for your message! I will get back to you soon.');
-          contactForm.reset();
-      });
-  }
-
-  // Scroll reveal animations
   const animateOnScroll = () => {
       const elements = document.querySelectorAll('.section, .project-card, .contact-card');
       
